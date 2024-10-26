@@ -79,6 +79,8 @@ body:before {
     border-radius: 20px;
     width: 90%; /* Use 90% to prevent cutting off on smaller screens */
     max-width: 500px; /* Maximum width for larger screens */
+    max-height: 80vh; /* Limit height to 80% of the viewport */
+    overflow-y: auto; /* Add vertical scrolling */
     text-align: center;
     color: #a379b4;
     font-size: 24px;
