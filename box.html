@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Box</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="box" onclick="openIntroModal()">
+        <div class="heart-box">
+            <img src="hearts.png" alt="Heart" class="heart" id="heartImage" /> <!-- Heart image -->
+            <p class="heart-text">CLICK IT, BLEEEEEEEEEEEEEEEEE</p> <!-- Added class here -->
+        </div>
+    </div>
+
+    <!-- Introductory Modal -->
+    <div id="intro-modal" class="intro-modal">
+        <div class="modal-content">
+            <p>Hi, love! ❤️</p>
+            <p>I know this is not much but I know you will appreciate it, just a simple token that I made for you heheheheh</p>
+        </div>
+    </div>
+
+    <!-- Final Modal with Envelopes -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="envelopes">
+                <!-- Envelopes -->
+                <div class="envelope" onclick="openLetter(1)">Envelope 1</div>
+                <div class="envelope" onclick="openLetter(2)">Envelope 2</div>
+                <div class="envelope" onclick="openLetter(3)">Envelope 3</div>
+                <div class="envelope" onclick="openLetter(4)">Envelope 4</div>
+                <div class="envelope" onclick="openLetter(5)">Envelope 5</div>
+            </div>
+
+            <div id="letter-content" class="letter-content">
+                <p id="letter-text"></p>
+                <div id="audio-container">
+                    <button onclick="playAudio()">Play Audio</button>
+                    <button onclick="openSpotify()">Open Playlist</button> <!-- New Spotify button -->
+                    <button onclick="printPDF()">Print PDF</button> <!-- New Print PDF button -->
+                    <audio id="audio" src="2.mp3"></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

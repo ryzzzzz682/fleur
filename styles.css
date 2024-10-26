@@ -1,0 +1,185 @@
+/* Background and Font */
+body {
+    font-family: 'Comic Sans MS';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2e7fc;
+}
+
+
+
+/* Background hearts */
+body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('hearts.png'); /* Optional: small heart pattern image */
+    background-size: contain; /* Change to contain for responsiveness */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Heart Box */
+.heart-box {
+    width: 250px;
+    height: 150px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* Heart Image */
+.heart {
+    width: 100px; /* Adjust the size as needed */
+    height: auto; /* Keep aspect ratio */
+    transition: transform 0.3s; /* Add hover effect */
+}
+
+.heart:hover {
+    transform: scale(1.1); /* Slightly scale on hover */
+}
+
+/* Text inside the heart box */
+.heart-box p {
+    font-size: 20px;
+    color: rgb(146, 27, 251);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Introductory Modal */
+.intro-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-modal .modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    color: #a379b4;
+    font-size: 24px;
+}
+
+/* Final Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    border: 2px solid #d8b5e8;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #a379b4;
+    cursor: pointer;
+}
+
+.envelopes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.envelope {
+    background-color: #f8e1f5;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.envelope:hover {
+    background-color: #e6b9e0;
+}
+
+.letter-content {
+    display: none;
+    margin-top: 20px;
+    background-color: #f8e1f5;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e7c4e7;
+    font-size: 18px;
+    color: #a379b4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#audio-container {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #a379b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #8e64a5;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .heart-box {
+        width: 200px; /* Smaller width for smaller screens */
+        height: 120px; /* Smaller height for smaller screens */
+    }
+
+    .heart-box p {
+        font-size: 18px; /* Smaller font size */
+    }
+
+    .modal-content {
+        max-width: 90%; /* Max width for modal */
+    }
+}

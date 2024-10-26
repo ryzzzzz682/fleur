@@ -1,0 +1,79 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f0f5; /* Soft background color */
+    color: #3c005e; /* Text color */
+    transition: opacity 5s ease; /* Transition effect */
+}
+
+.landing-container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.gift-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #a379b4; /* Button color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.gift-button:hover {
+    background-color: #8e64a5; /* Darker button color on hover */
+}
+
+
+.loading-screen {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it covers everything */
+    font-size: 24px;
+    color: #3c005e;
+}
+
+.loading-bar {
+    width: 80%; /* Width of the loading bar */
+    height: 20px; /* Height of the loading bar */
+    background-color: #e0e0e0; /* Background color of the bar */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure fill doesn't overflow */
+    margin-bottom: 20px; /* Space between bar and text */
+}
+
+.loading-fill {
+    height: 100%; /* Fill height to 100% */
+    width: 0; /* Start with 0 width */
+    background-color: #3c005e; /* Color of the fill */
+    transition: width 1000s; /* Duration of the fill animation (120 seconds) */
+}
+
