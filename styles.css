@@ -9,8 +9,6 @@ body {
     background-color: #f2e7fc;
 }
 
-
-
 /* Background hearts */
 body:before {
     content: '';
@@ -20,7 +18,7 @@ body:before {
     width: 100%;
     height: 100%;
     background-image: url('hearts.png'); /* Optional: small heart pattern image */
-    background-size: contain; /* Change to contain for responsiveness */
+    background-size: cover; /* Changed to cover for better responsiveness */
     background-position: center; /* Center the background */
     background-repeat: no-repeat;
     opacity: 0.08;
@@ -60,31 +58,8 @@ body:before {
     margin: 10px 0;
 }
 
-/* Introductory Modal */
-.intro-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    align-items: center;
-    justify-content: center;
-}
-
-.intro-modal .modal-content {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 20px;
-    width: 80%;
-    max-width: 400px;
-    text-align: center;
-    color: #a379b4;
-    font-size: 24px;
-}
-
-/* Final Modal */
+/* Modals */
+.intro-modal,
 .modal {
     display: none;
     position: fixed;
@@ -97,18 +72,19 @@ body:before {
     justify-content: center;
 }
 
+.intro-modal .modal-content,
 .modal-content {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 20px;
-    width: 80%;
-    max-width: 500px;
+    width: 90%; /* Use 90% to prevent cutting off on smaller screens */
+    max-width: 500px; /* Maximum width for larger screens */
     text-align: center;
-    position: relative;
-    border: 2px solid #d8b5e8;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    color: #a379b4;
+    font-size: 24px;
 }
 
+/* Close Button */
 .close {
     position: absolute;
     top: 10px;
@@ -118,6 +94,7 @@ body:before {
     cursor: pointer;
 }
 
+/* Envelopes */
 .envelopes {
     display: flex;
     flex-direction: column;
@@ -181,5 +158,10 @@ button:hover {
 
     .modal-content {
         max-width: 90%; /* Max width for modal */
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .close {
+        font-size: 20px; /* Adjust close button size */
     }
 }
